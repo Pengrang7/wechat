@@ -1,10 +1,10 @@
-package com.chat.repository;
+package com.chat.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.chat.entity.User;
+import com.chat.demo.entity.User;
 
 // 유저 저장소
 @Repository

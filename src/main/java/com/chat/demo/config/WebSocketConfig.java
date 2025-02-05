@@ -1,4 +1,4 @@
-package com.chat.config;
+package com.chat.demo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
