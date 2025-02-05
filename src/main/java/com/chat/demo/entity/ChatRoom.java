@@ -20,7 +20,7 @@ public class ChatRoom {
     @Column(nullable = false, length = 100)
     private String name; // 채팅방 이름
 
-    @Column(nullable = false, updatable = false)
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now(); // 생성 날짜
 
     // 채팅방 내 메시지 리스트
