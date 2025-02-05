@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:mysql://your-rds-endpoint:3306/your-database-name
+    username: your-username
+    password: your-password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  websocket:
+    enabled: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.web.socket: DEBUG
+
+# 1. datasource: AWS RDS MySQL 연결 정보 설정
+# jpa: JPA 관련 설정 (자동 테이블 생성, SQL 로깅 등)
+# websocket: WebSocket 활성화
+# 4. server: 서버 포트 설정
+# logging: WebSocket 관련 디버그 로깅 설정
